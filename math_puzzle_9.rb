@@ -77,6 +77,6 @@ def prime_digit_number_tuples_req(acc, list, n)
 end
 
 
-print prime_digit_number_tuples(prime_digit_numbers, 2).take(5)
-#  .lazy_select{|s| s[0] > 99 and s[0] < 1000 and s[1] > 9 and s[1] < 100}
-#  .lazy_select{|s| ([s[1]] + s[1].digits).all?{|d| (d * s[0]).is_prime_digit_number}}.first
+print prime_digit_number_tuples(prime_digit_numbers, 2)
+  .lazy_select{|s| s[0] > 99 and s[0] < 1000 and s[1] > 9 and s[1] < 100}
+  .lazy_select{|s| ([s[1]] + s[1].digits).all?{|d| (d * s[0]).is_prime_digit_number}}.first

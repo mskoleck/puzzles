@@ -98,6 +98,6 @@ prime_digits_numbers_pairs = Enumerator.new do |yielder|
   end
 end
 
-p prime_digits_numbers_pairs.first(10)
-#  .lazy_select {|p| mult_contains_prime_digits_only?(p)}
-#    .first(1)
+p prime_digits_numbers_pairs
+  .lazy_select {|p| mult_contains_prime_digits_only?(p)}
+  .first(1)
